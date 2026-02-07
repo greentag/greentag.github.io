@@ -1,130 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Greentag | Engineering Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greentag | Home</title>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
 </head>
+
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-  <div class="logo">
-    <a href="index.html">
-      <img src="images/logo.png" alt="Greentag Logo">
-    </a>
-  </div>
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="Greentag">
+    </div>
 
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Products</a>
-    <a href="services.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <button onclick="toggleLang()" class="lang-btn">हिंदी</button>
-  </nav>
+    <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#enquire" class="btn-nav">Enquire</a>
+        <a href="#support" class="btn-nav">Support</a>
+
+        <!-- MULTI LANGUAGE -->
+        <select id="languageSwitcher">
+            <option value="en">EN</option>
+            <option value="hi">हिंदी</option>
+        </select>
+    </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO / COMPANY INFO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1 id="heroTitle">Engineering Excellence</h1>
-    <p id="heroSub">Industrial & Automation Solutions</p>
-
-    <a href="contact.html" class="btn">Enquire Now</a>
-    <a href="services.html" class="btn secondary">Our Services</a>
-  </div>
+    <h1>Welcome to Greentag</h1>
+    <p>We provide eco-friendly & professional services across Delhi NCR.</p>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="about">
-  <h2 id="aboutTitle">About Greentag</h2>
-  <p id="aboutText">
-    Greentag delivers reliable engineering and industrial solutions
-    with a strong focus on quality, safety, and innovation.
-  </p>
+<!-- SERVICES PREVIEW -->
+<section class="services">
+    <h2>Our Services</h2>
+    <p>Consulting | Installation | Support | Maintenance</p>
 </section>
 
-<!-- ================= PRODUCTS ================= -->
-<section class="products">
-  <h2>Our Products</h2>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919716938334" class="whatsapp" target="_blank">
+    WhatsApp
+</a>
 
-  <div class="grid">
-    <div class="card">
-      <img src="images/p1.png" alt="Product One">
-      <h3>Product One</h3>
-      <p>High quality industrial solution</p>
-    </div>
-
-    <div class="card">
-      <img src="images/p2.png" alt="Product Two">
-      <h3>Product Two</h3>
-      <p>Reliable and efficient systems</p>
-    </div>
-
-    <div class="card">
-      <img src="images/p3.png" alt="Product Three">
-      <h3>Product Three</h3>
-      <p>Advanced engineering design</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHY US ================= -->
-<section class="why">
-  <h2>Why Choose Us</h2>
-
-  <div class="grid">
-    <div class="card">Experienced Team</div>
-    <div class="card">Quality Assurance</div>
-    <div class="card">Timely Delivery</div>
-    <div class="card">Customer Support</div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p>© 2026 Greentag. All Rights Reserved.</p>
-</footer>
-
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919716938334" class="whatsapp" target="_blank">💬</a>
-
-<!-- Scroll To Top -->
+<!-- BACK TO TOP -->
 <button id="topBtn">↑</button>
 
-<!-- ================= JS ================= -->
-<script>
-/* Scroll to top */
-const topBtn = document.getElementById("topBtn");
-window.addEventListener("scroll", () => {
-  topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-});
-topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Greentag. All Rights Reserved.</p>
 
-/* Language Toggle */
-let hindi = false;
-function toggleLang() {
-  hindi = !hindi;
-
-  document.getElementById("heroTitle").innerText =
-    hindi ? "इंजीनियरिंग उत्कृष्टता" : "Engineering Excellence";
-
-  document.getElementById("heroSub").innerText =
-    hindi ? "औद्योगिक और ऑटोमेशन समाधान" : "Industrial & Automation Solutions";
-
-  document.getElementById("aboutTitle").innerText =
-    hindi ? "ग्रीनटैग के बारे में" : "About Greentag";
-
-  document.getElementById("aboutText").innerText =
-    hindi
-      ? "ग्रीनटैग गुणवत्ता और सुरक्षा पर केंद्रित इंजीनियरिंग समाधान प्रदान करता है।"
-      : "Greentag delivers reliable engineering and industrial solutions with a strong focus on quality, safety, and innovation.";
-}
-</script>
+    <div class="social">
+        <a href="#"><img src="images/facebook.svg"></a>
+        <a href="#"><img src="images/instagram.svg"></a>
+        <a href="#"><img src="images/youtube.svg"></a>
+        <a href="#"><img src="images/linkedin.svg"></a>
+        <a href="#"><img src="images/x.svg"></a>
+    </div>
+</footer>
 
 </body>
 </html>
