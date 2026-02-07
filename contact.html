@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact | Greentag</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Greentag</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">
-    <a href="index.html"><img src="images/logo.png"></a>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html" class="active">Contact</a>
-    <button onclick="toggleLang()">हिंदी</button>
-  </nav>
+<!-- HEADER SAME AS INDEX -->
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.png">
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="#enquire" class="btn-nav">Enquire</a>
+        <a href="#support" class="btn-nav">Support</a>
+
+        <select id="languageSwitcher">
+            <option value="en">EN</option>
+            <option value="hi">हिंदी</option>
+        </select>
+    </nav>
 </header>
 
+<!-- CONTACT -->
 <section class="contact">
-  <h2>Contact Us</h2>
+    <h2>Contact Us</h2>
 
-  <p><strong>Email:</strong> pspujari88@gmail.com</p>
-  <p><strong>Phone:</strong> 9716938334</p>
-  <p><strong>Address:</strong> East Delhi, Delhi 110092</p>
+    <p>Email: pspujari88@gmail.com</p>
+    <p>Phone: 9716938334</p>
+    <p>Address: East Delhi, Delhi 110092</p>
 
-  <form action="https://formsubmit.co/pspujari88@gmail.com" method="POST" class="contact-form">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button class="btn">Send Message</button>
-  </form>
+    <!-- GOOGLE MAP -->
+    <iframe 
+        src="https://www.google.com/maps?q=East%20Delhi%20110092&output=embed"
+        loading="lazy">
+    </iframe>
 
-  <div class="map">
-    <iframe src="https://www.google.com/maps?q=East%20Delhi%20110092&output=embed"
-      width="100%" height="300" style="border:0;"></iframe>
-  </div>
+    <!-- CONTACT FORM -->
+    <form action="https://formspree.io/f/xxxxxx" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
 </section>
 
+<!-- FOOTER SAME -->
 <footer>
-  <p>© 2026 Greentag</p>
+    <p>© 2026 Greentag</p>
+    <div class="social">
+        <a href="#"><img src="images/facebook.svg"></a>
+        <a href="#"><img src="images/instagram.svg"></a>
+        <a href="#"><img src="images/youtube.svg"></a>
+        <a href="#"><img src="images/linkedin.svg"></a>
+        <a href="#"><img src="images/x.svg"></a>
+    </div>
 </footer>
-
-<a href="https://wa.me/919716938334" class="whatsapp" target="_blank">💬</a>
-<button id="topBtn">↑</button>
-
-<script>
-let hindi = false;
-function toggleLang() {
-  hindi = !hindi;
-  document.querySelector("h2").innerText = hindi ? "संपर्क करें" : "Contact Us";
-}
-
-const topBtn = document.getElementById("topBtn");
-window.addEventListener("scroll", () => {
-  topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-});
-topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-</script>
 
 </body>
 </html>
