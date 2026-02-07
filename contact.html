@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Greentag Engineering Solutions</title>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Contact | Greentag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="Greentag Logo">
-        </a>
-    </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Products</a>
-        <a href="services.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
-    </nav>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png"></a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="active">Contact</a>
+    <button onclick="toggleLang()">हिंदी</button>
+  </nav>
 </header>
 
-<!-- ================= CONTACT ================= -->
 <section class="contact">
-    <h2>Contact Us</h2>
+  <h2>Contact Us</h2>
 
-    <div class="contact-info">
-        <p><strong>Email:</strong> pspujari88@gmail.com</p>
-        <p><strong>Phone:</strong> +91 9716938334</p>
-        <p><strong>Address:</strong> East Delhi, Delhi 110092</p>
-    </div>
+  <p><strong>Email:</strong> pspujari88@gmail.com</p>
+  <p><strong>Phone:</strong> 9716938334</p>
+  <p><strong>Address:</strong> East Delhi, Delhi 110092</p>
 
-    <form class="contact-form" action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
+  <form action="https://formsubmit.co/pspujari88@gmail.com" method="POST" class="contact-form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=East%20Delhi%20110092&output=embed"
+      width="100%" height="300" style="border:0;"></iframe>
+  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-    <div class="map">
-  <iframe 
-    src="https://www.google.com/maps?q=East%20Delhi%20110092&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
-</div>
-
 <footer>
-    <p>© 2026 Greentag. All Rights Reserved.</p>
+  <p>© 2026 Greentag</p>
 </footer>
+
 <a href="https://wa.me/919716938334" class="whatsapp" target="_blank">💬</a>
+<button id="topBtn">↑</button>
+
+<script>
+let hindi = false;
+function toggleLang() {
+  hindi = !hindi;
+  document.querySelector("h2").innerText = hindi ? "संपर्क करें" : "Contact Us";
+}
+
+const topBtn = document.getElementById("topBtn");
+window.addEventListener("scroll", () => {
+  topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+</script>
 
 </body>
 </html>
