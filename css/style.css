@@ -221,5 +221,22 @@ footer {
   display: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+ 
+  }
+}
+
 
 }
