@@ -1,96 +1,95 @@
-<header>
-  <div class="logo">Greentag</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="products.html">Product</a>
-    <a href="partners.html">Our Partners</a>
-    <a href="services.html">Our Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="enquire.html">Enquire</a>
-    <a href="support.html">Support</a>
-    <a href="career.html">Career</a>
-
-    <!-- Language Picker -->
-    <select onchange="changeLang(this.value)">
-      <option value="en">English</option>
-      <option value="hi">हिंदी</option>
-      <option value="fr">French</option>
-      <option value="de">German</option>
-      <option value="es">Spanish</option>
-    </select>
-  </nav>
-</header>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greentag | Home</title>
-
+<title>Greentag Home</title>
 <link rel="stylesheet" href="css/style.css">
-<script defer src="js/script.js"></script>
 </head>
-<script src="js/lang.js"></script>
 
 <body>
 
 <!-- HEADER -->
-<header class="header">
-    <div class="logo">
-        <img src="images/logo.png" alt="Greentag">
-    </div>
+<header>
+<div class="logo">Greentag</div>
 
-    <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Our Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="#enquire" class="btn-nav">Enquire</a>
-        <a href="#support" class="btn-nav">Support</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="products.html">Product</a>
+<a href="partners.html">Our Partners</a>
+<a href="services.html">Our Services</a>
+<a href="contact.html">Contact</a>
+<a href="enquire.html">Enquire</a>
+<a href="support.html">Support</a>
+<a href="career.html">Career</a>
 
-        <!-- MULTI LANGUAGE -->
-        <select id="languageSwitcher">
-            <option value="en">EN</option>
-            <option value="hi">हिंदी</option>
-        </select>
-    </nav>
+<select onchange="changeLang(this.value)">
+<option value="en">English</option>
+<option value="hi">हिंदी</option>
+<option value="fr">French</option>
+</select>
+</nav>
 </header>
 
-<!-- HERO / COMPANY INFO -->
+<!-- HERO -->
 <section class="hero">
-    <h1>Welcome to Greentag</h1>
-    <p>We provide eco-friendly & professional services across Delhi NCR.</p>
+<h1 data-key="welcome">Welcome to Greentag</h1>
+<p>Salesforce • SAP B1 • Website Support • Environment Projects</p>
 </section>
 
-<!-- SERVICES PREVIEW -->
+<!-- SERVICES -->
 <section class="services">
-    <h2>Our Services</h2>
-    <p>Consulting | Installation | Support | Maintenance</p>
+<h2 data-key="services">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Salesforce Services</h3>
+<p>Implementation, Support, Automation</p>
+</div>
+
+<div class="card">
+<h3>SAP Business One</h3>
+<p>Setup, Optimization, Technical Support</p>
+</div>
+
+<div class="card">
+<h3>Website Support</h3>
+<p>Security, Maintenance, Performance</p>
+</div>
+
+<div class="card">
+<h3>Environmental Work</h3>
+<p>Sustainability initiatives & awareness</p>
+</div>
+
+<div class="card">
+<h3>Avernus</h3>
+<p>Books, Poetry & Thoughtful Writing</p>
+</div>
+
+</div>
 </section>
 
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/919716938334" class="whatsapp" target="_blank">
-    WhatsApp
-</a>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919716938334" class="whatsapp">Chat</a>
 
-<!-- BACK TO TOP -->
-<button id="topBtn">↑</button>
+<!-- Scroll Up -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="top">↑</button>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 Greentag. All Rights Reserved.</p>
+<p>© 2026 Greentag</p>
 
-    <div class="social">
-        <a href="#"><img src="images/facebook.svg"></a>
-        <a href="#"><img src="images/instagram.svg"></a>
-        <a href="#"><img src="images/youtube.svg"></a>
-        <a href="#"><img src="images/linkedin.svg"></a>
-        <a href="#"><img src="images/x.svg"></a>
-    </div>
+<div class="social">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+<a href="#">LinkedIn</a>
+<a href="#">X</a>
+</div>
 </footer>
 
+<script src="js/lang.js"></script>
 </body>
 </html>
